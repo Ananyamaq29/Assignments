@@ -1,0 +1,328 @@
+/* body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    
+    background-color: rgb(23, 98, 146);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+#search-bar {
+    padding: 5px;
+    margin-left: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+}
+#mid
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+}
+.blog-post {
+    flex: 1 1 30%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.blog-post h4 {
+    margin-top: 0;
+}
+
+#h4 {
+    font-size: ;
+}
+
+
+aside {
+    flex: 1;
+    background: #f4cbcb;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+#categories ul li a {
+    text-decoration: none;
+    color: #333;
+    margin: right;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.category-pop {
+    animation: pop 0.3s ease;
+}
+
+#subscription-form form {
+    display: flex;
+    flex-direction: column;
+    margin: right;
+}
+
+#subscription-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #fdfdfd;
+    margin: right;
+}
+
+#subscription-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #174f69;
+    color: #fff;
+    cursor: pointer;
+    margin: 1vh;
+}
+
+#subscription-form button:hover {
+    background-color: #555;
+}
+
+#about{
+    flex: 1;
+    background: #f4cbcb;
+    padding: 20px;
+    border-radius: 10px;  
+    margin: 1vh; 
+}
+
+footer {
+    background-color: rgb(23, 98, 146);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#social-media a {
+    color: #f9f8f8;
+    margin: 0 10px;
+    text-decoration: none;
+    border: #e9e9e9;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+
+    aside {
+        margin-top: 20px;
+    }
+} */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgb(23, 98, 146);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+#search-bar {
+    padding: 5px;
+    margin-left: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#mid {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#blog-posts {
+    display: flex;
+    flex-direction: column; /* Stack blog posts vertically */
+    width: 70%; /* Ensure it takes the full width */
+    padding: 10px;
+}
+
+.blog-post {
+    margin: 10px 0; /* Space between blog posts */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.blog-post h4 {
+    margin: left;
+}
+
+aside {
+    width: 25%;
+    flex: 1;
+    background: #f4cbcb;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+#categories ul li a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 10px;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.category-pop {
+    animation: pop 0.3s ease;
+}
+
+#subscription-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+#subscription-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #fdfdfd;
+}
+
+#subscription-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #174f69;
+    color: #fff;
+    cursor: pointer;
+}
+
+#subscription-form button:hover {
+    background-color: #555;
+}
+
+#about {
+    background: #f4cbcb;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+footer {
+    background-color: rgb(23, 98, 146);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#social-media a {
+    color: #f9f8f8;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    aside {
+        margin-top: 20px;
+    }
+}

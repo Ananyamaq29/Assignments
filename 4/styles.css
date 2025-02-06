@@ -1,0 +1,177 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 100px;
+    line-height: 100px;
+
+
+}
+
+header .logo {
+    width: 100px;
+    height: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.product-details {
+    text-align: center;
+}
+
+.product-image {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buy-now {
+    background-color: #c60000;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-now:hover {
+    background-color: #bf2600;
+}
+
+.collapsible {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: white;
+    font-size: 17px;
+    transition: background-color 0.2s;
+}
+
+.collapsible:hover {
+    background-color: #777070;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    background-color: #ffffff;
+    transition: max-height 0.2s ease-out;
+}
+
+aside {
+    width: 50%;
+    padding: 15px;
+    float: right;
+    font-style: italic;
+    background-color: #ffffff;
+    text-align: justify;
+    height: 30vh;
+    background-attachment: fixed;
+    border-left: 5px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    background-size: auto;
+}
+
+aside:hover {
+    transform: scale(1.05);
+}
+
+footer .social-media {
+    width: 40%;
+    color: white;
+    text-align: right;
+    padding-right: 5vw;
+    
+    
+}
+footer{
+    width: 100%;
+    background-color:#333;
+
+
+}
+footer a{
+    text-decoration: none;
+    color:white;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    gap:30%
+
+}
+footer .contactForm {
+    display: flex;
+    flex-direction: column;
+    margin: left;
+    text-align: right;
+    height: 30vh;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 30%; 
+    gap:1vh;
+    margin-bottom: 1vh;
+    margin-left: 1vw;
+    test-color: white;
+}
+form {
+    color: #ffffff;
+}
+form input{
+    width: 60%;
+}
+form textarea{
+    width: 70%;
+}
+form button{
+    width: 25%;
+    height: 4vh;
+}
+@media (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product-image {
+        width: 100%;
+    }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Blogging Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#blog-posts">Blog</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <input type="text" id="search-bar" placeholder="Search by title or author..." />
+            </ul>
+            
+        </nav>
+    </header>
+    <main>
+
+        <div id="mid">
+            <div id="blog-posts">
+                <h1>Blog</h1>
+                
+                <!-- Technology -->
+                <div class="blog-post">
+                    <h4>Title: The Rise of Quantum Computing</h4>
+                    <p>Author: Alice Walker</p>
+                    <p>Publish Date: February 3, 2025</p>
+                    <p>Summary: Discover how quantum computing could revolutionize technology and solve complex problems beyond the reach of classical computers.</p>
+                </div>
+            
+                <div class="blog-post">
+                    <h4>Title: The Future of AI in Healthcare</h4>
+                    <p>Author: Mark Davis</p>
+                    <p>Publish Date: January 29, 2025</p>
+                    <p>Summary: Explore the advancements in AI technology that are transforming the healthcare industry, from diagnostics to patient care.</p>
+                </div>
+            
+                <!-- Lifestyle -->
+                <div class="blog-post">
+                    <h4>Title: How to Achieve Work-Life Balance</h4>
+                    <p>Author: Sarah Lee</p>
+                    <p>Publish Date: January 20, 2025</p>
+                    <p>Summary: Learn the importance of maintaining a healthy work-life balance and practical tips to achieve it in a busy world.</p>
+                </div>
+            
+                <div class="blog-post">
+                    <h4>Title: 10 Simple Ways to Improve Mental Health</h4>
+                    <p>Author: Michael Brown</p>
+                    <p>Publish Date: January 18, 2025</p>
+                    <p>Summary: Mental health is crucial to our well-being. Discover 10 simple lifestyle changes that can help you feel better every day.</p>
+                </div>
+            
+                <!-- Travel -->
+                <div class="blog-post">
+                    <h4>Title: Top Destinations for Solo Travelers</h4>
+                    <p>Author: Emily White</p>
+                    <p>Publish Date: January 22, 2025</p>
+                    <p>Summary: Looking for a solo adventure? Check out these amazing travel destinations perfect for solo travelers seeking adventure and culture.</p>
+                </div>
+            
+                <div class="blog-post">
+                    <h4>Title: Sustainable Travel Tips for 2025</h4>
+                    <p>Author: David Green</p>
+                    <p>Publish Date: January 10, 2025</p>
+                    <p>Summary: Learn how to travel sustainably in 2025, from eco-friendly accommodations to reducing your carbon footprint while exploring the world.</p>
+                </div>
+            
+                <!-- Education -->
+                <div class="blog-post">
+                    <h4>Title: The Evolution of Online Education</h4>
+                    <p>Author: Linda Scott</p>
+                    <p>Publish Date: January 5, 2025</p>
+                    <p>Summary: Discover how online education is transforming learning, from virtual classrooms to interactive learning tools and resources.</p>
+                </div>
+            
+                <div class="blog-post">
+                    <h4>Title: How to Stay Motivated in Online Classes</h4>
+                    <p>Author: James Williams</p>
+                    <p>Publish Date: December 30, 2024</p>
+                    <p>Summary: Online learning can be tough, but staying motivated is key. Here are strategies to help you succeed and stay focused throughout your courses.</p>
+                </div>
+                
+                <div class="blog-post">
+                    <h4>Title: The Importance of STEM Education</h4>
+                    <p>Author: Olivia Taylor</p>
+                    <p>Publish Date: December 15, 2024</p>
+                    <p>Summary: STEM education (Science, Technology, Engineering, and Mathematics) is more important than ever. Find out how it shapes the future of industries worldwide.</p>
+                </div>
+            
+            </div>
+            
+            <aside>  
+                <div id="categories">
+                    <h3>Categories</h3>
+                        <a href="#" data-category="All">All</a><br> <!-- Add an 'All' category -->
+                        <a href="#" data-category="Technology">Technology</a><br>
+                        <a href="#" data-category="Lifestyle">Lifestyle</a><br>
+                        <a href="#" data-category="Travel">Travel</a><br>
+                        <a href="#" data-category="Education">Education</a>
+                </div>
+                
+                <div id="subscription-form">
+                    <h3>Subscribe</h3>
+                    <form id="subscribe">
+                        <input type="text" id="name" placeholder="Your Name" />
+                        <input type="email" id="email" placeholder="Your Email" />
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    
+                </div>
+            </aside>
+        </div>
+        
+    <div id="about" >
+        <h3>About the blog</h3>
+        <p>Welcome to our Dynamic Blogging Platform, where we share insightful articles on a variety of topics, ranging from the latest advancements in technology, sustainable living tips, to travel adventures and educational resources. Whether you're passionate about the world of AI, exploring new destinations, or seeking practical advice for everyday life, we've got something for everyone!
+
+            Our goal is to provide engaging, informative, and thought-provoking content to help you stay informed and inspired. We believe in creating a community where ideas are shared, and discussions thrive. Every post is carefully crafted by passionate writers who aim to bring valuable perspectives to your day-to-day life.
+            
+            Join us on this journey as we explore the ever-changing world around us. Don't forget to subscribe for regular updates and stay connected with our latest posts!</p>
+    </div>
+
+    </main>
+    <footer>
+        <p>© 2025 Dynamic Blogging Platform. All rights reserved.</p>
+        <div id="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <p>Contact us at: info@blogplatform.com</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
