@@ -7,6 +7,7 @@ document.getElementById('task-form').addEventListener('submit', function(event) 
     this.reset();
 });
 
+
 function validateForm() {
     const title = document.getElementById('title').value;
     const dueDate = document.getElementById('due-date').value;

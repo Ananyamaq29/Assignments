@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Expense Splitter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Travel Expense Splitter</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Expense</a>
+            <a href="#">History</a>
+        </nav>
+    </header>
+    <main>
+        <section id="expense-entry">
+            <h2>Expense Entry</h2>
+            <form id="expense-form">
+                <label for="description">Expense Description:</label>
+                <input type="text" id="description" name="description" required>
+                
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required min="0">
+                
+                <label for="payer">Payer:</label>
+                <select id="payer" name="payer" required>
+                    <option value="">Select a member</option>
+                    <!-- Dynamically populate this dropdown with JavaScript -->
+                </select>
+                
+                <label for="category">Expense Category:</label>
+                <select id="category" name="category" required>
+                    <option value="meals">Meals</option>
+                    <option value="hotels">Hotels</option>
+                    <option value="Transportation">Transportation</option>
+                    <option value="Site-seeing">Site-seeing</option>
+                    <option value="Adventure activity">Adventure activity</option>
+                </select>
+                
+                <button type="submit" id="split-expense" disabled>Split Expense</button>
+            </form>
+        </section>
+        <section id="summary">
+            <h2>Summary</h2>
+            <!-- Placeholder for summary details -->
+        </section>
+        <section id="user-list">
+            <h2>Group Members</h2>
+            <div class="user">
+                <img src="placeholder.jpg" alt="John's profile picture" />
+                <p>Ananya Agarwal</p>
+            </div>
+            <div class="user">
+                <img src="placeholder.jpg" alt="Alice's profile picture" />
+                <p>Amal Sharma</p>
+            </div>
+            <div class="user">
+                <img src="placeholder.jpg" alt="Bob's profile picture" />
+                <p>Harsh Gupta</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Contact us at: group@example.com</p>
+        <p>© 2025 Travel Expense Splitter</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

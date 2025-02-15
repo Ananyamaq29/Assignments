@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+.container {
+    display: flex;
+    width: 100%;
+}
+
+#usrl{
+    margin-left: -3vw;
+    color: white;
+}
+.user-list {
+    width: 250px;
+    background-color: #363636;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.user-list h3 {
+    margin-top: 0;
+}
+
+.user {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.user .name {
+    font-weight: bold;
+}
+
+.user .status {
+    font-size: 12px;
+}
+
+.user .status.online {
+    color: green;
+    font-size: large;
+}
+
+.user .status.offline {
+    color: #cc527a;
+    font-size: large;
+}
+
+
+.chat-window {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    border-left: 1px solid #ddd;
+    /* overflow: auto; */
+    height: 80vh;
+    /* text-align: scroll; */
+
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+    max-height: 70vh;
+}
+
+.message {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+    max-height: 75vh;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.message.user1 {
+    background-color: #ca99aa29;
+    text-align: left;
+}
+
+.message.user2 {
+    background-color: #f0f0f0;
+    text-align: right;
+}
+.message-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    position: relative;
+    z-index: 9;
+    /* align-items: flex-start; */
+
+}
+
+textarea {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    min-height: 50px; 
+    max-height: 150px; 
+    overflow-y: auto; 
+    font-size: 14px;
+
+
+}
+
+button {
+    padding: 10px;
+    background-color: #cc527a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ab3b61;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .user-list {
+        width: 100%;
+        order: -1;
+    }
+    .chat-window {
+        width: 100%;
+    }
+}

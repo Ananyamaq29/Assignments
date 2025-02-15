@@ -7,6 +7,7 @@ a {
     text-decoration: underline;
     color: red;
     margin-left: 250px;
+    position: inherit;
 
 
 }
@@ -25,6 +26,11 @@ a:hover {
     background-color: rgb(237, 237,220);
     margin-right: 20vw;
     
+}
+.summary-content {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
 }
 
 .header{
@@ -120,6 +126,12 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 10px;
 }
+
+img {
+    width: 5vh; 
+    height: 5vh; 
+    border-radius: 50%; 
+  }
 
 footer {
     text-align: center;

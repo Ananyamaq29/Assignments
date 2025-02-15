@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let events = JSON.parse(localStorage.getItem('events')) || [];
 
-    // Function to render events from the array to the table
+    let editingIndex = null;
+
     function renderEvents() {
         eventsTableBody.innerHTML = '';
         events.forEach((event, index) => {
@@ -25,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Event handler for form submission
     form.addEventListener('submit', function (e) {
         e.preventDefault();
         
@@ -44,16 +44,18 @@ document.addEventListener('DOMContentLoaded', () => {
             date: new Date(eventDate).toISOString(),
         };
 
-        // Add new event to the events array and local storage
-        events.push(newEvent);
-        localStorage.setItem('events', JSON.stringify(events));
+        if (editingIndex !== null) {
+            events[editingIndex] = newEvent;
+            editingIndex = null; 
+        } else {
+            events.push(newEvent);
+        }
 
-        // Clear form fields and re-render the events
+        localStorage.setItem('events', JSON.stringify(events));
         form.reset();
         renderEvents();
     });
 
-    // Event delegation for Edit and Delete actions
     eventsTableBody.addEventListener('click', function (e) {
         const index = e.target.dataset.index;
 
@@ -68,12 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
             eventNameInput.value = event.name;
             eventDescriptionInput.value = event.description;
             eventDateInput.value = event.date.substring(0, 16);  // Format to match datetime-local
-            events.splice(index, 1);
-            localStorage.setItem('events', JSON.stringify(events));
-            renderEvents();
+
+            editingIndex = index;  // Set the index of the event being edited
         }
     });
 
-    // Initial rendering of events
     renderEvents();
 });

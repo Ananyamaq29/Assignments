@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Sample data for blog posts
+
     const blogPosts = [
         {
             title: 'The Rise of Quantum Computing',
@@ -66,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    // Load blog posts dynamically
     const blogContainer = document.querySelector('#blog-posts');
     const categoryLinks = document.querySelectorAll('#categories a');
     const searchInput = document.querySelector('#search-bar');
@@ -74,9 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const nameInput = document.querySelector('#name');
     const emailInput = document.querySelector('#email');
 
-    // Function to render blog posts
     function renderPosts(posts) {
-        blogContainer.innerHTML = '';  // Clear current posts
+        blogContainer.innerHTML = '';  
         posts.forEach(post => {
             const postDiv = document.createElement('div');
             postDiv.classList.add('blog-post');
@@ -89,26 +87,23 @@ document.addEventListener('DOMContentLoaded', () => {
             blogContainer.appendChild(postDiv);
         });
     }
-    
-    // Initial render
+
     renderPosts(blogPosts);
     
 
-    // Function to filter posts based on search
+    
     function filterPosts(query) {
         const filteredPosts = blogPosts.filter(post => 
             post.title.toLowerCase().includes(query.toLowerCase()) ||
             post.author.toLowerCase().includes(query.toLowerCase())
         );
-        console.log(filteredPosts); // Log filtered posts to debug
+        console.log(filteredPosts); 
         renderPosts(filteredPosts);
     }
     
-
-    // Function to filter posts by category
     function filterByCategory(category) {
         if (category === 'All') {
-            renderPosts(blogPosts);  // Show all posts if 'All' category is selected
+            renderPosts(blogPosts);  
         } else {
             const filteredPosts = blogPosts.filter(post => 
                 post.category === category
@@ -117,7 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Function to validate subscription form
     function validateForm(e) {
         e.preventDefault();
     
@@ -135,31 +129,20 @@ document.addEventListener('DOMContentLoaded', () => {
         return true;
     }
     
-
-    // Event listener for search bar input
     searchInput.addEventListener('input', (e) => {
         filterPosts(e.target.value);
     });
     
 
-    // Event listeners for category filtering
     categoryLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const category = e.target.dataset.category;
             filterByCategory(category);
-            // Smooth scroll functionality
-            window.scrollTo({
-                top: blogContainer.offsetTop - 50,
-                behavior: 'smooth'
-            });
+
+            
         });
     });
-    
-
-    // Event listener for subscription form submission
     subscribeForm.addEventListener('submit', validateForm);
-
-    // Initial render of all blog posts
     renderPosts(blogPosts);
 });

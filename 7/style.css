@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(to right, #0c161e, #00f2fe);
+  color: white;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: grid;
+  height:90vh;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+section {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  width: 5vh; 
+  height: 5vh; 
+  border-radius: 50%; 
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+}
+
+#expense-form {
+  width: 300px;
+}
+
+form input, form select, form button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#description {
+  width: 95%;
+}
+
+#amount {
+  width: 95%;
+}
+form button {
+  background-color: #2f363d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #8fa0a0;
+}
+section {
+  margin-bottom: 20px;
+
+}
+
+footer{
+  background-color: black;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color:white;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    
+  }
+}
